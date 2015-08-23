@@ -6,9 +6,7 @@ This repo is to create a simple web application implementing AngularJS and Boots
 
 ## Approaches:
 High Level Overview:
-[!highlevel](img/highlevel.png)
-
-
+![highlevel](img/highlevel.png)
 
 
 ## Results:
