@@ -1,6 +1,7 @@
 app.controller('userCtrl', function($scope, Users) {
-        var orginUser = new Users();
-        $scope.users = orginUser.userlist;
+        
+        $scope.user = new Users();
+        $scope.users = $scope.user.userlist;
 
 
         $scope.edit = false;
@@ -24,7 +25,10 @@ app.controller('userCtrl', function($scope, Users) {
         $scope.pageSize = 10;
         $scope.maxSize = 5;
 
-        $scope.editUser;
+
         //When the *delete* button is clicked.
-        $scope.deleteUser;
+        $scope.deleteUser = function(id) {
+            $scope.user.deleteUser(id);
+            Users.userlist = $scope.user.userlist;
+        };
 });

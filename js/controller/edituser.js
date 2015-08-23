@@ -1,7 +1,9 @@
-app.controller('changeUser', function($scope, $routeParams) {
+app.controller('changeUser', function($scope, $routeParams, Users) {
     var id = $routeParams.id;
 
-
+    $scope.user = new Users();
+    $scope.users = $scope.user.userlist;
+    
     $scope.fName = $scope.users[id-1].fName;
     $scope.lName = $scope.users[id-1].lName;
     $scope.gender = $scope.users[id-1].gender;
